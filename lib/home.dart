@@ -441,7 +441,6 @@ class _HomePageState extends State<HomePage> {
                                       'lectureList':
                                           FieldValue.arrayUnion([docID])
                                     });
-
                                     await FirebaseFirestore.instance.collection('lecture').doc(docID)
                                         .collection('quiz').doc(userUID)
                                         .set({'wrong' : 0, 'quiz': 0});
